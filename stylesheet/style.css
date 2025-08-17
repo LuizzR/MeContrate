@@ -7,34 +7,40 @@ body {
 .menu-bar {
     display: flex;
     top: 0;
+    left: 0;
+    height: 15vh;
+    width: 100%;
+    padding: 0 4vh;
     color: #1e1e31;
     box-sizing: border-box;
+    position: fixed;
+    background-color: white;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0.3vh 0.6vh rgba(0, 0, 0, 0.377);
+    border-bottom: 1vh white solid;
+    border-bottom-left-radius: 3%;
+
 }
 
 .heading {
-    display: inline-flex;
-    position: fixed;
     font-size: 4vh;
-    margin-left: 14vh;
-    margin-top: 2%;
+    height: 5vh;
 }
 
 .lef-logo {
-    display: inline-flex;
-    float: left;
-    position: fixed;
-    margin-top: 1%;
-    margin-left: 2%;
     height: 9vh;
 }
 
 .options {
-    position: fixed;
     margin-left: auto;
-    margin-top: 4vh;
+    display: flex;
+    align-items: center;
     right: 0;
     font-size: 3vh;
     font-size: 18px;
+    gap: 0.3vh;
     font-family: Inter, sans-serif;
 }
 
@@ -42,6 +48,11 @@ body {
     text-decoration: none;
     color: inherit;
     padding-left: 5vh;
+}
+
+.options a:hover {
+    text-decoration: underline;
+    color: #000000;
 }
 
 .options button {
@@ -53,7 +64,8 @@ body {
     margin-left: 5vh;
     text-align: center;
     border-color: #3B82F6;
-    border-radius: 5px;
+    border: 1 solid;
+    border-radius: 1vh;
     cursor: pointer;
 }
 
@@ -67,20 +79,56 @@ body {
     background-color: #8b2de4;
     border-color: #8b2de4;
     color: white;
-    margin-right: 5.5vh;
+    border: 0;
 }
 
 #signup:hover {
     transition: 0.4s;
     background-color: #6214ac;
 }
-
-.line-separator-heading {
-    outline: thin solid #e8e6e6;
-    margin-top: 7.5%;
+/* Login Modal */
+.signin-modal {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    background-color: #0000007e;
 }
 
+.signin-box {
+    width: 30%;
+    height: 95%;
+    padding: 0 2rem;
+    background-color: #ffffffd3;
+    backdrop-filter: blur(10px);
+    border-radius: 2%;
+}
+
+.close-signin {
+    position: absolute;
+    top: 5vh;
+    right: 3vh;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4d4d4d;
+    background: transparent;
+    text-decoration: none;
+    width: 50px;
+    height: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* Login Modal */
+
 .main-content {
+    margin-top: 3.5cm;
     height: 80vh;
     background: linear-gradient(to right, #8e2de2, #1e4de9, #69b2ff);
     color: white;

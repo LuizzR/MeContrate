@@ -7,9 +7,7 @@
     <meta name="keywords" content="emprego, curriculo, primeiro emprego">
     <meta name="description" content="Comece a ganhar dinheiro sendo freelancer agora mesmo!">
 
-    <!-- CSS E JS
     <script src="scripts/script.js"></script>
-    -->
     <link rel="stylesheet" href="stylesheet/style.css">
     <link rel="icon" type="image/x-icon" href="assets/mecontrate.ico">
     <title>MeContrate</title>
@@ -22,31 +20,30 @@
         </div>
 
         <div class="options">
-            <a href="#Home" class="link">Início</a>
+            <a href="index.html" class="link">Início</a>
             <a href="#Vagas" class="link">Vagas</a>
             <a href="Dashboard" class="link">Dashboard</a>
 
             
-            <button class="login" id="signin">
+            <button class="login" id="signin" type="button" onclick="signin()">
                 Login
             </button>
             
-            <button class="login" id="signup">
+            <button class="login" id="signup" type="button">
                 Cadastro
             </button>
         </div>
 
     </nav>
 
-    <div class="line-separator-heading">
-    </div>
-
     <section class="main-content">
         <h1 id="maintext">Encontre o <strong style="color: yellow;">Talento</strong> Certo para <br> o Seu Projeto</h1>
+
         <p>O <b>MeContrate</b> vem com o objetivo de conectar freelancers de alta qualidade e competentes, de <br> forma rápida e segura por todo o Piauí.</p>
 
-        <button id="hire"><b>Contratar um Freelancer</b></button>
-        <button id="work"><b>Sou Freelancer</b></button>
+        <div id="sign" class="sign"></div>
+        <button id="hire" type="button"><b>Contratar um Freelancer</b></button>
+        <button id="work" type="button"><b>Sou Freelancer</b></button>
     </section>
 
     <footer class="about-us">
@@ -59,5 +56,13 @@
 
         <a href="whatsapplink"><img src="assets/contact-us.png" alt="Fale conosco">Fale conosco</a>
     </footer>
+
+    <div class="signin-modal" id="signin-modal">
+        <div class="signin-box">
+            <button class="close-signin" id="close-signin">X</button>
+            <h1>Login</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, dignissimos inventore rerum incidunt ipsa at voluptate fuga ab illum ea aspernatur repellendus, consequuntur facere minima. Delectus eligendi asperiores optio inventore.</p>
+        </div>
+    </div>
 </body>
 </html>
